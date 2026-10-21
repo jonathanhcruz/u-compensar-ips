@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: ips_ucompensar_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ips_ucompensar
+    ports:
+      - "5430:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./ipsUcompensar.sql:/docker-entrypoint-initdb.d/01-ipsUcompensar.sql:ro
+      - ./:/scripts:ro
+
+volumes:
+  pgdata:
