@@ -13,7 +13,7 @@ docker compose up -d
 
 The database, tables and mock data are created automatically.
 
-## Conections
+## Connections
 
 The database is exposed on port **5430** of the host machine.
 
