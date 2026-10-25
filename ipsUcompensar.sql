@@ -172,6 +172,9 @@ CREATE TABLE APPOIMENT (
 
     CONSTRAINT uq_date_doctor
         UNIQUE (id_doctor, date_appointment, hour_appointment)
+
+    CONSTRAINT uq_date_patient
+        UNIQUE (id_patient, date_appointment, hour_appointment)
 );
 
 
