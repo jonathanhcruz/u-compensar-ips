@@ -58,22 +58,22 @@ INSERT INTO COVERAGE (id_medical_plan, id_service) VALUES
     (4, 1), (4, 3), (4, 5),
     (5, 1), (5, 2), (5, 3), (5, 4);
 
-INSERT INTO PATIENT (id, name, date_birth, gender, phone, email, address, id_medical_plan, id_user_login) VALUES
-    ('1012345678', 'Laura Martínez',  '1990-03-15', 'Femenino',  '3001234567', 'laura.martinez@mail.com',  'Calle 45 # 12-30, Bogotá',      1, 1),
-    ('1023456789', 'Carlos Gómez',    '1985-07-22', 'Masculino', '3109876543', 'carlos.gomez@mail.com',    'Carrera 7 # 80-15, Bogotá',     2, 2),
-    ('1034567890', 'Ana Ruiz',        '2001-11-02', 'Femenino',  '3204567890', 'ana.ruiz@mail.com',        'Avenida 68 # 23-40, Bogotá',    3, 3),
-    ('1045678901', 'Jorge Herrera',   '1972-01-30', 'Masculino', '3157654321', 'jorge.herrera@mail.com',   'Calle 100 # 15-20, Bogotá',     4, 4),
-    ('1056789012', 'Diana Castro',    '1998-05-09', 'Femenino',  '3012223344', 'diana.castro@mail.com',    'Carrera 50 # 3-25, Bogotá',     5, 5);
+INSERT INTO PATIENT (id, name, date_birth, gender, phone, email, address, id_medical_plan, username) VALUES
+    ('1012345678', 'Laura Martínez',  '1990-03-15', 'Femenino',  '3001234567', 'laura.martinez@mail.com',  'Calle 45 # 12-30, Bogotá',      1, 'lmartinez'),
+    ('1023456789', 'Carlos Gómez',    '1985-07-22', 'Masculino', '3109876543', 'carlos.gomez@mail.com',    'Carrera 7 # 80-15, Bogotá',     2, 'cgomez'),
+    ('1034567890', 'Ana Ruiz',        '2001-11-02', 'Femenino',  '3204567890', 'ana.ruiz@mail.com',        'Avenida 68 # 23-40, Bogotá',    3, 'aruiz'),
+    ('1045678901', 'Jorge Herrera',   '1972-01-30', 'Masculino', '3157654321', 'jorge.herrera@mail.com',   'Calle 100 # 15-20, Bogotá',     4, 'jherrera'),
+    ('1056789012', 'Diana Castro',    '1998-05-09', 'Femenino',  '3012223344', 'diana.castro@mail.com',    'Carrera 50 # 3-25, Bogotá',     5, 'dcastro');
 
-INSERT INTO EMPLOYEE (id, name, date_birth, gender, phone, email, address, id_user_login) VALUES
-    ('79111222', 'Andrés Rojas',      '1980-04-12', 'Masculino', '3005551001', 'andres.rojas@ips.com',      'Calle 63 # 9-40, Bogotá',      6),
-    ('52222333', 'Paula Suárez',      '1983-09-25', 'Femenino',  '3005551002', 'paula.suarez@ips.com',      'Carrera 15 # 93-10, Bogotá',   7),
-    ('80333444', 'Felipe Moreno',     '1976-12-03', 'Masculino', '3005551003', 'felipe.moreno@ips.com',     'Calle 26 # 69-55, Bogotá',     8),
-    ('52444555', 'Natalia Vargas',    '1988-06-18', 'Femenino',  '3005551004', 'natalia.vargas@ips.com',    'Carrera 11 # 70-22, Bogotá',   9),
-    ('79555666', 'Ricardo Torres',    '1979-02-27', 'Masculino', '3005551005', 'ricardo.torres@ips.com',    'Calle 140 # 19-30, Bogotá',   10),
-    ('52666777', 'María Ramírez',     '1995-08-14', 'Femenino',  '3005551006', 'maria.ramirez@ips.com',     'Carrera 30 # 45-12, Bogotá',  11),
-    ('80777888', 'Sergio López',      '1987-10-05', 'Masculino', '3005551007', 'sergio.lopez@ips.com',      'Calle 72 # 20-18, Bogotá',    12),
-    ('52888999', 'Patricia Cárdenas', '1992-03-21', 'Femenino',  '3005551008', 'patricia.cardenas@ips.com', 'Carrera 68 # 1-45, Bogotá',   13);
+INSERT INTO EMPLOYEE (id, name, date_birth, gender, phone, email, address, username) VALUES
+    ('79111222', 'Andrés Rojas',      '1980-04-12', 'Masculino', '3005551001', 'andres.rojas@ips.com',      'Calle 63 # 9-40, Bogotá',      'dr.rojas'),
+    ('52222333', 'Paula Suárez',      '1983-09-25', 'Femenino',  '3005551002', 'paula.suarez@ips.com',      'Carrera 15 # 93-10, Bogotá',   'dr.suarez'),
+    ('80333444', 'Felipe Moreno',     '1976-12-03', 'Masculino', '3005551003', 'felipe.moreno@ips.com',     'Calle 26 # 69-55, Bogotá',     'dr.moreno'),
+    ('52444555', 'Natalia Vargas',    '1988-06-18', 'Femenino',  '3005551004', 'natalia.vargas@ips.com',    'Carrera 11 # 70-22, Bogotá',   'dr.vargas'),
+    ('79555666', 'Ricardo Torres',    '1979-02-27', 'Masculino', '3005551005', 'ricardo.torres@ips.com',    'Calle 140 # 19-30, Bogotá',   'dr.torres'),
+    ('52666777', 'María Ramírez',     '1995-08-14', 'Femenino',  '3005551006', 'maria.ramirez@ips.com',     'Carrera 30 # 45-12, Bogotá',  'mramirez'),
+    ('80777888', 'Sergio López',      '1987-10-05', 'Masculino', '3005551007', 'sergio.lopez@ips.com',      'Calle 72 # 20-18, Bogotá',    'admin'),
+    ('52888999', 'Patricia Cárdenas', '1992-03-21', 'Femenino',  '3005551008', 'patricia.cardenas@ips.com', 'Carrera 68 # 1-45, Bogotá',   'pcardenas');
 
 INSERT INTO SPECIALTY (name) VALUES
     ('Medicina General'),

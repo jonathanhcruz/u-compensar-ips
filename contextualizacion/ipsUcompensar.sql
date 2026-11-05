@@ -29,8 +29,7 @@ CREATE TABLE ROLE_PERMISSION (
 );
 
 CREATE TABLE USER_LOGIN (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
+    username VARCHAR(50) PRIMARY KEY,
     password VARCHAR(225) NOT NULL,
     id_role INT NOT NULL,
 
@@ -79,15 +78,15 @@ CREATE TABLE PATIENT (
     email VARCHAR(254) NOT NULL,
     address VARCHAR(254) NOT NULL,
     id_medical_plan INT NOT NULL,
-    id_user_login INT UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
 
     CONSTRAINT fk_medical_plan
         FOREIGN KEY (id_medical_plan)
         REFERENCES  MEDICAL_PLAN(id),
 
     CONSTRAINT fk_user_login
-        FOREIGN KEY (id_user_login)
-        REFERENCES USER_LOGIN(id)
+        FOREIGN KEY (username)
+        REFERENCES USER_LOGIN(username)
 );
 
 
@@ -102,10 +101,10 @@ CREATE TABLE EMPLOYEE (
     phone VARCHAR(15) NOT NULL,
     email VARCHAR(254) NOT NULL,
     address VARCHAR(254) NOT NULL,
-    id_user_login INT UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
     CONSTRAINT fk_user_login
-        FOREIGN KEY (id_user_login)
-        REFERENCES USER_LOGIN(id)
+        FOREIGN KEY (username)
+        REFERENCES USER_LOGIN(username)
 );
 
 CREATE TABLE SPECIALTY (
@@ -171,7 +170,7 @@ CREATE TABLE APPOIMENT (
         REFERENCES OFFICE(id),
 
     CONSTRAINT uq_date_doctor
-        UNIQUE (id_doctor, date_appointment, hour_appointment)
+        UNIQUE (id_doctor, date_appointment, hour_appointment),
 
     CONSTRAINT uq_date_patient
         UNIQUE (id_patient, date_appointment, hour_appointment)
