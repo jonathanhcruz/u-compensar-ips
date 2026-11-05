@@ -10,8 +10,8 @@ services:
       - "5430:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./ipsUcompensar.sql:/docker-entrypoint-initdb.d/01-ipsUcompensar.sql:ro
-      - ./ipsMock.sql:/docker-entrypoint-initdb.d/02-mockData.sql:ro
+      - ./contextualizacion/ipsUcompensar.sql:/docker-entrypoint-initdb.d/01-ipsUcompensar.sql:ro
+      - ./contextualizacion/ipsMock.sql:/docker-entrypoint-initdb.d/02-mockData.sql:ro
       - ./:/scripts:ro
 
 volumes:
