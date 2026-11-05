@@ -153,3 +153,5 @@ INSERT INTO ORDER_DETAIL (dose, frecuency, duration, id_medical_order, id_medica
     ('1 tableta',  'Cada 24 horas', '10 días', 4, 4),
     ('1 tableta',  'Cada 12 horas', '3 días',  5, 2),
     ('1 tableta',  'Cada 24 horas', '90 días', 6, 5);
+
+COMMIT;
