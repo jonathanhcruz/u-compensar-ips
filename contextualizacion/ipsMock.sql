@@ -104,15 +104,17 @@ INSERT INTO OFFICE (name, floor, id_side) VALUES
     ('Consultorio 301', '3', 4),
     ('Consultorio 203', '2', 5);
 
-INSERT INTO APPOIMENT (date_appointment, hour_appointment, status, id_patient, id_doctor, id_office) VALUES
-    ('2026-09-01', '08:00', 'completada', '1012345678', '79111222', 1),
-    ('2026-09-02', '09:30', 'completada', '1023456789', '52222333', 2),
-    ('2026-09-03', '10:00', 'completada', '1034567890', '80333444', 3),
-    ('2026-09-04', '14:00', 'completada', '1045678901', '52444555', 4),
-    ('2026-09-05', '15:30', 'completada', '1056789012', '79555666', 5),
-    ('2026-09-10', '08:00', 'completada', '1012345678', '80333444', 3),
-    ('2026-11-03', '08:00', 'programada', '1023456789', '79111222', 1),
-    ('2026-11-04', '11:00', 'cancelada',  '1034567890', '52222333', 2);
+-- cost según la especialidad del médico:
+-- Medicina General 45000 | Pediatría 70000 | Ginecología 85000 | Dermatología 90000 | Cardiología 120000
+INSERT INTO APPOIMENT (date_appointment, hour_appointment, status, cost, id_patient, id_doctor, id_office) VALUES
+    ('2026-09-01', '08:00', 'completada',  45000, '1012345678', '79111222', 1),
+    ('2026-09-02', '09:30', 'completada',  70000, '1023456789', '52222333', 2),
+    ('2026-09-03', '10:00', 'completada', 120000, '1034567890', '80333444', 3),
+    ('2026-09-04', '14:00', 'completada',  90000, '1045678901', '52444555', 4),
+    ('2026-09-05', '15:30', 'completada',  85000, '1056789012', '79555666', 5),
+    ('2026-09-10', '08:00', 'completada', 120000, '1012345678', '80333444', 3),
+    ('2026-11-03', '08:00', 'programada',  45000, '1023456789', '79111222', 1),
+    ('2026-11-04', '11:00', 'cancelada',   70000, '1034567890', '52222333', 2);
 
 INSERT INTO HISTORY (blood_type, alergy, family_history, id_patient) VALUES
     ('O+',  'Ninguna conocida', 'Padre con hipertensión',          '1012345678'),

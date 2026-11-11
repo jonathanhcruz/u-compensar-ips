@@ -153,6 +153,7 @@ CREATE TABLE APPOIMENT (
     date_appointment DATE NOT NULL,
     hour_appointment TIME NOT NULL,
     status VARCHAR(30) NOT NULL,
+    cost NUMERIC(12,2) NOT NULL,
     id_patient VARCHAR(20) NOT NULL,
     id_doctor VARCHAR(20) NOT NULL,
     id_office INT NOT NULL,
@@ -173,7 +174,10 @@ CREATE TABLE APPOIMENT (
         UNIQUE (id_doctor, date_appointment, hour_appointment),
 
     CONSTRAINT uq_date_patient
-        UNIQUE (id_patient, date_appointment, hour_appointment)
+        UNIQUE (id_patient, date_appointment, hour_appointment),
+
+    CONSTRAINT chk_cost
+        CHECK (cost > 0)
 );
 
 
