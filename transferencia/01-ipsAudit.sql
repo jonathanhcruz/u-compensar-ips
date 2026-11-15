@@ -12,3 +12,6 @@ CREATE TABLE IF NOT EXISTS AUDIT (
     CONSTRAINT check_operation
         CHECK (operation IN ('INSERT', 'UPDATE', 'DELETE'))
 );
+
+-- la auditoría no se puede modificar ni borrar
+REVOKE UPDATE, DELETE, TRUNCATE ON AUDIT FROM ips_admin;

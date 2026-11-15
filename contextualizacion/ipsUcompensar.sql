@@ -251,3 +251,13 @@ CREATE TABLE ORDER_DETAIL (
         UNIQUE (id_medication, id_medical_order)
 );
 
+
+/*
+* Usuario administrador (lectura y escritura, sin superusuario)
+*/
+CREATE USER ips_admin WITH PASSWORD 'admin123';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO ips_admin;
+
+-- permisos para las tablas que se creen después (ej. AUDIT)
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO ips_admin;

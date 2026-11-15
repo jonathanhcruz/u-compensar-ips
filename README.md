@@ -29,7 +29,7 @@ The database is exposed on port **5430** of the host machine.
 
 The work is split by delivery, one folder each:
 
-- `contextualizacion/`: schema (DDL), mock data and simple queries.
+- `contextualizacion/`: schema (DDL), `ips_admin` user (password `admin123`), mock data and simple queries.
 - `profundizacion/`: transactions, stored procedures, 30 `JOIN` queries and 10 views.
 - `transferencia/`: audit table, 8 triggers, 12 stored procedures and their evidence.
 
