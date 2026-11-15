@@ -31,9 +31,10 @@ The work is split by delivery, one folder each:
 
 - `contextualizacion/`: schema (DDL), mock data and simple queries.
 - `profundizacion/`: transactions, stored procedures, 30 `JOIN` queries and 10 views.
+- `transferencia/`: audit table, 8 triggers, 12 stored procedures and their evidence.
 
-Run the `profundizacion/` files in numeric order, then `ipsCreateViews.sql`:
+Run the files of each folder in numeric order:
 
 ```bash
-docker exec -i ips_ucompensar_db psql -U postgres -d ips_ucompensar -f /scripts/profundizacion/<file>.sql
+docker exec -i ips_ucompensar_db psql -U postgres -d ips_ucompensar -f /scripts/<folder>/<file>.sql
 ```
